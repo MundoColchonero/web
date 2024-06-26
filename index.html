@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Colchonero</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+    <header>
+        <a href="#" class="logo">Logo</a>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home" class="active">Inicio</a></li>
+                <li><a href="file:///D:/Documents/Desktop/mi%20primera%20pagina%20web/indexhistory.html" >Historia</a></li>
+                <li><a href="#noticias" >Noticias</a></li>
+                <li><a href="file:///D:/Documents/Desktop/mi%20primera%20pagina%20web/indexplantilla.html" >Plantilla</a></li>
+                <li><a href="#contact" >Contacto</a></li>
+            </ul>
+            
+        </nav>
+        <div class="fas fa-bars"></div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="content">
+            <h1>Mundo Colchonero</h1>
+            <p>Herederos de un sentimiento.</p>
+            <a href="#"><button>Descubre mas</button></a>
+        </div>
+    </section>
+
+
+    <section class="product" id="product">
+
+        <div class="box-container">
+
+            <div class="box">
+                <i class="fab fa-instagram"></i>
+                <h3>Instagram</h3>
+                <p>@mundo.colchonero</p>
+                <a href="https://www.instagram.com/mundo.colchonero_/"><button>Seguir</button></a>
+            </div>
+
+            <div class="box">
+                <i class="fab fa-twitter"></i>
+                <h3>Twitter</h3>
+                <p>@ColchoneroES</p>
+                <a href="https://x.com/ColchoneroEs"><button>Seguir</button></a>
+            </div>
+
+            <div class="box">
+                <i class="fab fa-tiktok"></i>
+                <h3>TikTok</h3>
+                <p>@mundo.colchonero_</p>
+                <a href="https://www.tiktok.com/@mundo.colchonero_?is_from_webapp=1&sender_device=pc"><button>Seguir</button></a>
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+    <section class="about" id="about">
+
+        <h1 class="heading">Historia</h1>
+        <h3>Lorem ipsum dolor sit </h3>
+        <div class="row">
+            <div class="image">
+                <img src="imagenes/02.jpg" alt="imagen Historia">
+            </div>
+            <div class="content">
+                <h3>Historia del Atlético de Madrid</h3>
+                <p>pincha aquí para leer más
+                                         ⬇️
+                </p>
+                <a href="file:///D:/Documents/Desktop/mi%20primera%20pagina%20web/indexhistory.html"><button>Leer mas</button></a>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="course" id="course">
+
+        <h1 class="heading">Cursos</h1>
+        <h3 class="title">sit amet consectetur</h3>
+
+        <div class="box-container">
+
+            <div class="box">
+                <i class="fab fa-android"></i>
+                <h3>Android</h3>
+                <p>ipsum dolor sit amet</p>
+            </div>
+
+            <div class="box">
+                <i class="fab fa-apple"></i>
+                <h3>Apple</h3>
+                <p>ipsum dolor sit amet</p>
+            </div>
+
+            <div class="box">
+                <i class="fab fa-angular"></i>
+                <h3>Angular</h3>
+                <p>ipsum dolor sit amet</p>
+            </div>
+
+            <div class="box">
+                <i class="fab fa-android"></i>
+                <h3>Android</h3>
+                <p>ipsum dolor sit amet</p>
+            </div>
+
+            <div class="box">
+                <i class="fab fa-apple"></i>
+                <h3>Apple</h3>
+                <p>ipsum dolor sit amet</p>
+            </div>
+
+            <div class="box">
+                <i class="fab fa-angular"></i>
+                <h3>Angular</h3>
+                <p>ipsum dolor sit amet</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="review" id="review">
+
+        
+       
+
+    </section>
+
+    <section class="contact" id="contact">
+
+        <h1 class="heading">Contacto</h1>
+        <h3></h3>
+        <div class="row">
+            <div class="form-container">
+
+                <form action="">
+                    <input type="text" placeholder="Nombre">
+                    <input type="email" placeholder="Correo">
+                    <input type="number" placeholder="Telefono">
+                    <textarea cols="15" rows="5" placeholder="Mensaje"></textarea >
+                    <input type="submit" value="Enviar">        
+                </form>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="footer">
+
+        <div class="icons">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-reddit"></a>
+        </div>
+
+    </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+
+        $(document).ready(function() {
+
+            $('.fa-bars').click(function() {
+
+                $(this).toggleClass('fa-times');
+                $('.navbar').toggleClass('nav-toggle');
+
+            });
+
+            $(window).on('scroll load', function() {
+
+                $('.fa-bars').removeClass('fa-times');
+                $('.navbar').removeClass('nav-toggle');
+
+                $('section').each(function() {
+
+                    var id = $(this).attr('id');
+                    var height = $(this).height();
+                    var offset = $(this).offset().top -200;
+                    var top = $(window).scrollTop();
+
+                    if(top >= offset && top < offset + height) {
+                        $('.navbar ul li a').removeClass('active');
+                        $('.navbar').find('[href="#'+id+'"]').addClass('active');
+                    }
+
+                });
+
+            });
+
+        });
+
+    </script>
+    
+</body>
+</html>
